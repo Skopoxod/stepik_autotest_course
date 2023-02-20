@@ -14,15 +14,15 @@ def doTheWork(browser, link):
     input2.send_keys("cowabunga")
     input3 = browser.find_element(By.XPATH, "//label[text()='Email*']/following-sibling::input")
     input3.send_keys("cowabunga")
-    # Отправляем заполненную форму
+    # ГЋГІГЇГ°Г ГўГ«ГїГҐГ¬ Г§Г ГЇГ®Г«Г­ГҐГ­Г­ГіГѕ ГґГ®Г°Г¬Гі
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
-    # Проверяем, что смогли зарегистрироваться
-    # ждем загрузки страницы
+    # ГЏГ°Г®ГўГҐГ°ГїГҐГ¬, Г·ГІГ® Г±Г¬Г®ГЈГ«ГЁ Г§Г Г°ГҐГЈГЁГ±ГІГ°ГЁГ°Г®ГўГ ГІГјГ±Гї
+    # Г¦Г¤ГҐГ¬ Г§Г ГЈГ°ГіГ§ГЄГЁ Г±ГІГ°Г Г­ГЁГ¶Г»
     time.sleep(3)
-    # находим элемент, содержащий текст
+    # Г­Г ГµГ®Г¤ГЁГ¬ ГЅГ«ГҐГ¬ГҐГ­ГІ, Г±Г®Г¤ГҐГ°Г¦Г Г№ГЁГ© ГІГҐГЄГ±ГІ
     welcome_text_elt = browser.find_element(By.TAG_NAME, "h1")
-    # записываем в переменную welcome_text текст из элемента welcome_text_elt
+    # Г§Г ГЇГЁГ±Г»ГўГ ГҐГ¬ Гў ГЇГҐГ°ГҐГ¬ГҐГ­Г­ГіГѕ welcome_text ГІГҐГЄГ±ГІ ГЁГ§ ГЅГ«ГҐГ¬ГҐГ­ГІГ  welcome_text_elt
     welcome_text = welcome_text_elt.text
     return welcome_text
 
